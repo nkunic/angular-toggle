@@ -1,0 +1,83 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+.wrapper + .wrapper {
+  margin-top: 1rem;
+}
+
+// AAA
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  &:not(.item--active) {
+    background-color: lightgray;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+.item--active {
+  background-color: pink;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+// BBB
+.sqare {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  &:not(.sqare--active) {
+    background-color: lightgray;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+.sqare--active {
+  background-color: blue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+// CCC
+.block {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.block--status-success {
+  background-color: green;
+}
+.block--status-danger {
+  background-color: red;
+}
+
+// EEE
+.circle {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: {
+    radius: 50%;
+  }
+  &:not(.circle--active) {
+    background-color: lightgray;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+.circle--active {
+  background-color: orange;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button + .circle {
+  margin-left: 1rem;
+}
+button {
+  cursor: pointer;
+}

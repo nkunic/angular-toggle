@@ -1,0 +1,51 @@
+<!--AAA-->
+<div class="wrapper">
+  <div
+    class="item"
+    (click)="itemClassIsActive = !itemClassIsActive"
+    [ngClass]="{ 'item--active': itemClassIsActive }"
+  >
+    Add/Remove item class In HTML
+  </div>
+</div>
+
+<!--BBB-->
+<div class="wrapper">
+  <div
+    class="sqare"
+    (click)="toggleSquareClass()"
+    [ngClass]="{ 'sqare--active': sqareClassIsActive }"
+  >
+    Add/Remove sqare class in function
+  </div>
+</div>
+
+<!-- CCC -->
+<div class="wrapper">
+  <div
+    class="block"
+    (click)="boxStatus = !boxStatus"
+    [ngClass]="boxStatus ? 'block--status-success' : 'block--status-danger'"
+  >
+    Toggle between 2 classes in HTML
+  </div>
+</div>
+
+<!-- DDD -->
+<div class="wrapper">
+  <div
+    class="block"
+    (click)="changeBlockStatusClickEvent()"
+    [ngClass]="
+      blockStatusClass ? 'block--status-success' : 'block--status-danger'
+    "
+  >
+    Toggle between 2 classes in function
+  </div>
+</div>
+
+<!-- EEE -->
+<div class="wrapper">
+  <button (click)="toggleCircleClass()">Add/Remove circle class</button>
+  <div class="circle" [class.circle--active]="circleClassIsActive"></div>
+</div>
